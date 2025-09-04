@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Stopwatch</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <div class="stopwatch-container">
+        <div class="stopwatch">
+            <div class="mode-toggle">
+                <button id="modeToggle" onclick="toggleMode()">🌙 Dark Mode</button>
+            </div>
+            <div id="display">00:00:00.000</div>
+            <div class="controls">
+                <button class="btn" onclick="startStopwatch()">Start</button>
+                <button class="btn" onclick="pauseStopwatch()">Pause</button>
+                <button class="btn" onclick="resetStopwatch()">Reset</button>
+                <button class="btn" onclick="recordLap()">Lap</button>
+            </div>
+            <ul id="lapList"></ul>
+        </div>
+    </div>
+    <script src="task2.js"></script>
+</body>
+</html>
