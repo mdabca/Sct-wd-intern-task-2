@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #5cf8db, #4160ea);
+    transition: background 0.5s;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #1474d5, #89f690);
+}
+
+.stopwatch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.stopwatch {
+    background: linear-gradient(135deg, #a8f294, #c797fa);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark-mode .stopwatch {
+    background-color: rgba(44, 62, 80, 0.95);
+    color: #ecf0f1;
+}
+
+#display {
+    font-size: 56px;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+body.dark-mode #display {
+    color: #ecf0f1;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+#lapList {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#lapList li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Courier New', monospace;
+    color: #2c3e50;
+    background-color: rgba(236, 240, 241, 0.5);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+body.dark-mode #lapList li {
+    color: #ecf0f1;
+    background-color: rgba(52, 73, 94, 0.5);
+    border-bottom: 1px solid #7f8c8d;
+}
+
+.mode-toggle {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#modeToggle {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #95a5a6;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#modeToggle:hover {
+    background-color: #7f8c8d;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+      }
